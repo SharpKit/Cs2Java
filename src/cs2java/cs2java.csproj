@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDD98BBA-35CE-43DC-839D-AD5EE192F013}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JSharp</RootNamespace>
+    <AssemblyName>cs2java</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.NRefactory, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GitHub\NRefactory\bin\net_4_5_Release\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory.Cecil">
+      <HintPath>..\..\..\GitHub\NRefactory\ICSharpCode.NRefactory.Cecil\bin\Release\ICSharpCode.NRefactory.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GitHub\NRefactory\bin\net_4_5_Release\ICSharpCode.NRefactory.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compiler\CompilerConfig.cs" />
+    <Compile Include="Compiler\CompilerException.cs" />
+    <Compile Include="Compiler\CompilerLogger.cs" />
+    <Compile Include="Compiler\CompilerService.cs" />
+    <Compile Include="Compiler\CompilerTool.cs" />
+    <Compile Include="Compiler\CompilerToolArgs.cs" />
+    <Compile Include="Compiler\CompilerToolCommon.cs" />
+    <Compile Include="Compiler\Console.cs" />
+    <Compile Include="Compiler\CSharp\ClrResolveVisitor.cs" />
+    <Compile Include="Compiler\CSharp\CollectionExtensions.cs" />
+    <Compile Include="Compiler\CSharp\CommentsExporter.cs" />
+    <Compile Include="Compiler\CSharp\Cs2.cs" />
+    <Compile Include="Compiler\CSharp\CsEntityExt.cs" />
+    <Compile Include="Compiler\CSharp\CsExternalMetadata.cs" />
+    <Compile Include="Compiler\CSharp\ExpressionExtensions.cs" />
+    <Compile Include="Compiler\CSharp\Extensions_Metadata.cs" />
+    <Compile Include="Compiler\CSharp\YieldRefactorer.cs" />
+    <Compile Include="Utils\Misc\FileUtils.cs" />
+    <Compile Include="Compiler\Java\Extensions.cs" />
+    <Compile Include="Compiler\Java\JCodeImporter.cs" />
+    <Compile Include="Compiler\Java\JCodeImporter2.cs" />
+    <Compile Include="Compiler\Java\JCodeImporter3.cs" />
+    <Compile Include="Compiler\Java\JModelImporter.cs" />
+    <Compile Include="Compiler\Java\JTypeImporter.cs" />
+    <Compile Include="Compiler\JFileWrapper.cs" />
+    <Compile Include="Compiler\JMeta.cs" />
+    <Compile Include="Compiler\JNaming.cs" />
+    <Compile Include="Compiler\CSharp\NProject2.cs" />
+    <Compile Include="Compiler\Manifest.cs" />
+    <Compile Include="Compiler\Plugin\ICompiler.cs" />
+    <Compile Include="Compiler\Plugin\ICompilerPlugin.cs" />
+    <Compile Include="Compiler\Plugin\ICSharpModel.cs" />
+    <Compile Include="Compiler\SourceMapping\SourceMapping.cs" />
+    <Compile Include="Compiler\SourceMapping\SourceMappingGenerator.cs" />
+    <Compile Include="Java\Ast\Extensions.cs" />
+    <Compile Include="Java\Ast\J.cs" />
+    <Compile Include="Java\Ast\JFile.cs" />
+    <Compile Include="Java\Ast\JModel.cs" />
+    <Compile Include="Java\Ast\JModel2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Java\Ast\JWriter.cs" />
+    <Compile Include="Java\JAttributes.cs" />
+    <Compile Include="Java\JAttributesEx.cs" />
+    <Compile Include="Text\AutoDisposeIndentedTextWriter.cs" />
+    <Compile Include="Text\TextLocation.cs" />
+    <Compile Include="Utils\Analytics\Mp2.cs" />
+    <Compile Include="Utils\Http\JsonServer.cs" />
+    <Compile Include="Utils\Misc\CSharpHelper.cs" />
+    <Compile Include="Utils\Misc\EnumerableHelper.cs" />
+    <Compile Include="Utils\Misc\JavaScriptHelper.cs" />
+    <Compile Include="Utils\Misc\XExtensions.cs" />
+    <Compile Include="Utils\Misc\XmlHelper.cs" />
+    <Compile Include="Utils\Misc\XSerializer.cs" />
+    <Compile Include="Utils\Misc\StopwatchHelper.cs" />
+    <Content Include="LibExtensions\CSharp.cs" />
+    <Content Include="LibExtensions\NRefactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Java\Ast\JModel2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JModel2.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SystemUtils\SystemUtils.csproj">
+      <Project>{48ca56c0-2f89-494e-aa26-ab34c0457253}</Project>
+      <Name>SystemUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Compiler\Files\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)$(OutDir)*.dll" "$(ProjectDir)..\..\bin\"
+copy "$(ProjectDir)$(OutDir)*.exe" "$(ProjectDir)..\..\bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

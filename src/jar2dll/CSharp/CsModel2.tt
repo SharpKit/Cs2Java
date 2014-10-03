@@ -1,0 +1,50 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="$(SolutionDir)src\modelgen\bin\Debug\modelgen.exe" #>
+<#@ assembly name="$(SolutionDir)src\modelgen\bin\Debug\SystemUtils.dll" #>
+<#@ output extension=".cs" #>
+<#new modelgen.T4ModelGenTool{Generator={}}.Run(this, Host);
+/*
+Element
+    object Tag
+    string Name
+Class : Member
+    string Namespace
+    List<Class> GenericArguments
+    Class BaseClass
+    List<Class> Interfaces
+    List<Member> Members
+    bool IsInterface
+    bool IsDelegate
+    bool IsAbstract
+    bool IsSealed
+Method : Member
+    List<Parameter> Parameters
+    List<Class> GenericArguments
+    bool IsConstructor
+    bool IsAbstract
+    Method ExplicitImplementationOfInterfaceMethod
+Parameter : TypedElement
+    bool IsOptional
+    Method DeclaringMethod
+Field : Member
+    string Initializer
+    bool IsReadOnly
+Property : Member
+    bool IsReadOnly
+Event : Member
+TypedElement : Element
+    Class TypeRef
+Member : TypedElement
+    bool IsStatic
+    Class DeclaringClass
+    List<Attribute> Attributes
+    string Summary
+    string Remarks
+    bool IsVirtual
+    bool IsOverride
+    bool IsNew
+    bool IsProtected
+    bool IsPrivate
+    bool IsInternal
+*/
+#>

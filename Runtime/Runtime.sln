@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rt", "rt\rt.csproj", "{21154B8D-5B6D-444A-974C-758897162F6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcorlib", "jcorlib\jcorlib.csproj", "{5F068E41-922E-4B1D-A41F-0EB0DC7D0D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{E712DDD3-F24C-4740-8286-6F4196A8C69F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21154B8D-5B6D-444A-974C-758897162F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21154B8D-5B6D-444A-974C-758897162F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21154B8D-5B6D-444A-974C-758897162F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21154B8D-5B6D-444A-974C-758897162F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F068E41-922E-4B1D-A41F-0EB0DC7D0D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F068E41-922E-4B1D-A41F-0EB0DC7D0D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F068E41-922E-4B1D-A41F-0EB0DC7D0D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F068E41-922E-4B1D-A41F-0EB0DC7D0D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E712DDD3-F24C-4740-8286-6F4196A8C69F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E712DDD3-F24C-4740-8286-6F4196A8C69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E712DDD3-F24C-4740-8286-6F4196A8C69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E712DDD3-F24C-4740-8286-6F4196A8C69F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
